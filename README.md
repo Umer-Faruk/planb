@@ -1,24 +1,20 @@
 # planb
 
+<!DOCTYPE HTML>
+<html>
+<head>
 <style>
-#div1 {
-  width: 350px;
-  height: 70px;
+#div1, #div2 {
+  float: left;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
   padding: 10px;
-  border: 1px solid #aaaaaa;
+  border: 1px solid black;
 }
 </style>
 
 
-```render
-DOM_NODE.innerHTML = 'Hey there!'
-```
-
-
-```js
-   const myvar = "hello"
-   module.exports.response = response = ()=>{mycode here}
-   
 <script>
 function allowDrop(ev) {
   ev.preventDefault();
@@ -34,12 +30,18 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 </script>
- ```
 </head>
 <body>
 
-<p>Drag the W3Schools image into the rectangle:</p>
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <!-- <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> -->
+  <input type="text" draggable="true" ondragstart="drag(event)" id="drag1">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
