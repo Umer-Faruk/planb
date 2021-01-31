@@ -36,6 +36,7 @@ function drop(ev) {
 <h2>Drag and Drop</h2>
 <p>Drag the image back and forth between the two div elements.</p>
 
+
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
   <!-- <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31"> -->
   <input type="text" draggable="true" ondragstart="drag(event)" id="drag1">
