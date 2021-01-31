@@ -14,16 +14,14 @@
 }
 </style> -->
 
-
+<!--
 <script>
 function allowDrop(ev) {
   ev.preventDefault();
 }
-
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
-
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
@@ -32,6 +30,7 @@ function drop(ev) {
 </script>
 </head>
 <body>
+-->
 
 <h2>Drag and Drop</h2>
 <p>Drag the image back and forth between the two div elements.</p>
