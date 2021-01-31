@@ -13,6 +13,12 @@
 ```render
 DOM_NODE.innerHTML = 'Hey there!'
 ```
+
+
+```js
+   const myvar = "hello"
+   module.exports.response = response = ()=>{mycode here}
+   
 <script>
 function allowDrop(ev) {
   ev.preventDefault();
@@ -28,6 +34,7 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 </script>
+ ```
 </head>
 <body>
 
