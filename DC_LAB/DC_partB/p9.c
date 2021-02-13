@@ -34,27 +34,34 @@ int main(int argc , char* argv[])
         }
     }
     else if( rank == 0 ) 
-	{
+	{   int finalcount = 0;
+       long finalniter = 0;
+         
         for(i = 0; i < size; i++ )
-		{
+		{   
             MPI_Recv(&recieved[i],size,MPI_INT,MPI_ANY_SOURCE,1,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
             MPI_Recv(&recvniter[i],size,MPI_LONG,MPI_ANY_SOURCE,2,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
-        }
-    }
-   if( rank == 0 )
-   {
-       int finalcount = 0;
-       long finalniter = 0;
-
-       for(i = 0; i < size; i++ )
-	   {
-           finalcount += recieved[i];
+            finalcount += recieved[i];
            finalniter += recvniter[i];
-       }
+        }
 
        double pi = ((double) finalcount/(double) finalniter) * 4.0;
        printf("\nThe value of pi is %f\n",pi);
-   }
+    }
+//    if( rank == 0 )
+//    {
+//        int finalcount = 0;
+//        long finalniter = 0;
+
+//        for(i = 0; i < size; i++ )
+// 	   {
+//            finalcount += recieved[i];
+//            finalniter += recvniter[i];
+//        }
+
+//        double pi = ((double) finalcount/(double) finalniter) * 4.0;
+//        printf("\nThe value of pi is %f\n",pi);
+//    }
 
    MPI_Finalize();
 }

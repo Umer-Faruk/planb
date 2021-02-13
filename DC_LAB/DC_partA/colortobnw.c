@@ -2,6 +2,7 @@
 #include<gd.h>
 #include<omp.h>
  
+ //to run  gcc filename.c -fopenmp -lgd
 
 int main(){
 
@@ -25,7 +26,7 @@ int main(){
 
      #pragma omp parallel for private(color)
      for(int x=0;x< width;x++){
-          #pragma omp creitical
+          #pragma omp critical
           for(int y = 0 ; y < height;y++ ){
                color = gdImageGetPixel(img, x, y);
                combined = 0.3*gdImageRed(img, color) + 0.5*gdImageGreen(img,color)+ 0.11*gdImageBlue(img,color);

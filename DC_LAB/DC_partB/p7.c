@@ -1,6 +1,5 @@
 
 #include<stdio.h>
-
 #include<mpi.h>
 #include<string.h>
 #define BUFFER_SIZE 32
@@ -18,6 +17,7 @@ int main(int argc, char* argv[])
 	MPI_Status status;
 	MPI_Comm_rank(MPI_COMM_WORLD,&rank);
 	MPI_Comm_size(MPI_COMM_WORLD,&numprocs);
+	printf("%d\n",numprocs);
 	if(rank==0)
 	{
 		strcpy(msg,"Hello");
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
      else if(rank == 2){
           int y;
           MPI_Recv(&y,1,MPI_INT,0,1,MPI_COMM_WORLD,&status);
-          printf("%d receve by process %d",y,rank);
+          printf("\n%d receve by process %d",y,rank);
      }
 	MPI_Finalize();
 }
