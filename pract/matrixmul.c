@@ -6,10 +6,10 @@
 void main(){
 
      int M[2][2]={{1,4},{4,7}};
-     int V[2]={1,1};
+     int V[2]={2,3};
      int RV[2];
 
-     #pragma omp parallel for private(V)
+     #pragma omp parallel for
      for(int i = 0;i<2;i++){
           for(int j=0;j<2;j++){
                printf("%d \t",M[i][j]);
