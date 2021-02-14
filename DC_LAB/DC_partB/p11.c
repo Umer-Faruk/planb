@@ -9,14 +9,14 @@ double a[N][N], b[N][N], c[N][N];
 
 int main(int argc, char* argv[])
 {
-        int ntasks, tid, nworkers, src, dest, rows, offset, i, j, k;
+        int size, tid, nworkers, src, dest, rows, offset, i, j, k;
         struct timeval start, stop;
         
-	MPI_Init(&argc, &argv);
+	    MPI_Init(&argc, &argv);
         MPI_Comm_rank(MPI_COMM_WORLD, &tid);
-        MPI_Comm_size(MPI_COMM_WORLD, &ntasks);
+        MPI_Comm_size(MPI_COMM_WORLD, &size);
         
-		nworkers=ntasks-1;
+		nworkers=size-1;
         if(tid==0)
 		{
             for(i=0; i<N; i++)
