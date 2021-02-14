@@ -34,7 +34,7 @@ void main(){
      #pragma omp parallel sections
      {
           #pragma omp section
-               prim(n);
+          prim(n);
 
           #pragma omp section
           sinn(n);
