@@ -1,4 +1,5 @@
- 
+// This program is to caculate PI using MPI
+// The algorithm is based on Monte Carlo method. The Monte Carlo method randomly picks up a large number of points in a square. It only counts the ratio of pints in side the circule.
 
 #include <stdio.h>
 #include <stdlib.h>

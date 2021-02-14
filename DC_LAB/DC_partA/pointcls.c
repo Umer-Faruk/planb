@@ -5,6 +5,7 @@
 #include <omp.h>
 
 int cluster[4][2] = {{75, 25}, {25, 25}, {25, 75}, {65, 65}};
+
 int datapoints[5][2] = {{58, 78}, {45, 87}, {98, 87}, {99, 79}, {75, 1}};
  
 
@@ -13,6 +14,7 @@ double get_distance(int x1, int y1, int x2, int y2)
     int dx = x2 - x1, dy = y2 - y1;
     return ((double)sqrt(dx * dx + dy * dy));
 }
+
 void classify_points()
 {
     long i;
