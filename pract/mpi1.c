@@ -11,6 +11,7 @@ void main(int argc , char* argv[]){
 
       if(rank == 0){
            int x=10;
+
            MPI_Send(&x,1,MPI_INT,1,1,MPI_COMM_WORLD);
       }
       else if(rank == 1){
@@ -20,3 +21,5 @@ void main(int argc , char* argv[]){
       }
       MPI_Finalize();
 }
+
+

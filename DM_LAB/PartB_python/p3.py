@@ -29,3 +29,7 @@ rules = apriori(records, min_support = min_sup, min_confidence = min_confidence)
 for rule in rules:
     items = [i for i in rule[0]]
     print("Rule : ",items, "Support :", rule[1], "Confidence : ", rule[2][0][2])
+
+#rules = apriori(records, min_support = 0.03, min_confidence = 0.7)
+#for i in rules:
+#    print(f"{i[0]} {i[1]}  {i[2][0][2]}")

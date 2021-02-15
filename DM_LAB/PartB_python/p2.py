@@ -8,16 +8,24 @@ import seaborn as sns
 df = pd.read_csv('CustomerData.csv')
 df = df.bfill()
 
+#df.dropna(axis=0,inplace = True)
+
 df.hist() 
 plt.show()
+
 df.plot.bar() 
 
 plt.bar(df['age'], df['annual income (lakhs)']) 
+
 plt.xlabel("Age") 
 plt.ylabel("age group") 
 plt.show() 
 df.head()
 
-sns.boxplot(x = df['age'])
 
-sns.scatterplot(data = df, x = df.age, y = df['annual income (lakhs)'])
+sns.boxplot(df['age'])
+sns.scatterplot(data = df, x='annual income (lakhs)',y='items purchased (monthly)', hue='gender')
+#sns.scatterplot(data = df, x = df.age, y = df['annual income (lakhs)'])
+
+
+

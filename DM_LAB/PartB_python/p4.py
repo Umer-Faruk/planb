@@ -5,7 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df1 = pd.read_csv('CustomerData.csv')
+df1 = pd.read_csv('association_analysis.csv')
 df1 = df1.bfill()
 
 # !pip install pyfpgrowth
@@ -20,8 +20,4 @@ for i in range(len(df1)):
     records.append(record)
 
 itemsets = fpg.find_frequent_patterns(records, 0.03)
-
-
-itemsets
-
 fpg.generate_association_rules(itemsets, 0.7)

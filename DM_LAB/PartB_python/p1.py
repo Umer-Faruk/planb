@@ -18,13 +18,18 @@ data.fillna(data.mean(),inplace=True)
 data.isna().sum()
 
 data.dropna(axis=0,inplace=True)
+
 data.drop(columns=('customer_id'),axis=1,inplace=True)
 data.head()
 
+from sklearn.preprocessing import LabelEncoder
+data[['gender','purchase type ','category','country']] = data[['gender','purchase type ','category','country']].apply(LabelEncoder().fit_transform)
+data.head()
+
+data['age'] = pd.cut(x = data['age'],labels=('child','adult','sc'), bins=(0,18,65,100), include_lowest=True)
 
 
 
-sns.histplot(data=data, x='spending score')
-sns.boxplot(data=data, x='items purchased (monthly)')
-sns.scatterplot(data=data, x='annual income (lakhs)',y='items purchased (monthly)', hue='gender')
-sns.barplot(data=data, x='age', y='items purchased (monthly)')
+
+
+ 
