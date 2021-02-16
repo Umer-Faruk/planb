@@ -40,7 +40,7 @@ void main (int argc, char* argv[])
     if (rank==0)
     {
         pi=4*d*sum;
-        printf("np=%2d;       PI=%0.4f\n   size=%d\n", size, pi,size);
+        printf("np=%d;       PI=%f\n   size=%d\n", size, pi,size);
     }
     
     MPI_Finalize();

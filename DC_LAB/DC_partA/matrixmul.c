@@ -5,11 +5,13 @@
 
 void main(){
 
-     int M[2][2]={{1,4},{4,7}};
-     int V[2]={1,1};
+     int M[2][2]={{0,1},{1,2}};
+
+     int V[2]={1,2};
+
      int RV[2];
 
-     #pragma omp parallel for
+     #pragma omp parallel for 
      for(int i = 0;i<2;i++){
           for(int j=0;j<2;j++){
                printf("%d \t",M[i][j]);
@@ -19,6 +21,7 @@ void main(){
           
      }
 
+     printf("Result vector\n");
      for(int i=0;i<2;i++){
           printf("%d\n",RV[i]);
      }

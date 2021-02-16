@@ -4,7 +4,7 @@
 void main()
 {
      int fact1 = 1,fact2 =1;
-     int a=6,i;
+     int a=5,i;
 
      #pragma omp parallel for firstprivate(a)
      // printf("%d\n",a);
@@ -17,6 +17,8 @@ void main()
      
      printf("with private\n");
      printf("fact1 :%d\n",fact1);
+
+     
 
      printf("\n\n");
      #pragma omp parallel for firstprivate(a,fact2)

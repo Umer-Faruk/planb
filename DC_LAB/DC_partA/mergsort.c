@@ -2,10 +2,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
+int temp[1000];
 void merge(int a[] , int x1 , int y1 , int x2 , int y2)
 {
-    int p = x1, q = x2, k = 0, temp[1000],i,j;
+    int p = x1, q = x2, k = 0,i,j;
     while(p <= y1 && q <= y2 ){
         if(a[p] < a[q])
             temp[k++] = a[p++];

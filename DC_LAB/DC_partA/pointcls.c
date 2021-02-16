@@ -45,10 +45,10 @@ void main()
 
     
  
-    //  classify_points(num_points);
+     classify_points();
 
-    double t1 = omp_get_wtime();
-    classify_points();
-    double t2 = omp_get_wtime();
-    printf("Time taken %lf\n", t2 - t1);
+    // double t1 = omp_get_wtime();
+    // classify_points();
+    // double t2 = omp_get_wtime();
+    // printf("Time taken %lf\n", t2 - t1);
 }
